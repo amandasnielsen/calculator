@@ -23,7 +23,7 @@ function main() {
         numberButtons[i].addEventListener("click", handleNumberButtonClick)
     }
 
-    // Adds event listener when clear and action buttons are clicked 
+    // Adds event listener when clear and action buttons are clicked and continues to their functions
     actionButtonPlus.addEventListener("click", handleActionButtonPlusClick)
     actionButtonMinus.addEventListener("click", handleActionButtonMinusClick)
     actionButtonMultiply.addEventListener("click", handleActionButtonMultiplyClick)
@@ -31,6 +31,8 @@ function main() {
     clearButton.addEventListener("click", handleClearButtonClick)
 }
 
+// Below are button click functions separated from the main to improve readability.
+// Updates last input number and result number field with the clicked number.
 function handleNumberButtonClick(event) {
     const lastInputNumber = document.getElementById("last-input-number")
     const resultNumber = document.getElementById("result-number")
@@ -40,27 +42,30 @@ function handleNumberButtonClick(event) {
 
     lastInputNumber.innerHTML = numberString
     resultNumber.innerHTML = currentNumber
-
 }
 
+// Updates last input number and result number field with the clicked number.
 function handleActionButtonPlusClick(event) {
     lastNumber = currentNumber
     currentNumber = ""
     lastAction = "plus"
 }
 
+// Updates last input number and result number field with the clicked number.
 function handleActionButtonMinusClick(event) {
     lastNumber = currentNumber
     currentNumber = ""
     lastAction = "minus"
 }
 
+// Updates last input number and result number field with the clicked number.
 function handleActionButtonMultiplyClick(event) {
     lastNumber = currentNumber
     currentNumber = ""
     lastAction = "multiply"
 }
 
+// Calculates both numbers based on the clicked action
 function handleActionButtonEqualsClick(event) {
     console.log("Equals Button Clicked")
     console.log(lastNumber, currentNumber, lastAction)
@@ -79,6 +84,7 @@ function handleActionButtonEqualsClick(event) {
     }
 }
 
+// Clears all data and restarts the calculator
 function handleClearButtonClick(event) {
     lastNumber = ""
     currentNumber  = ""
@@ -91,4 +97,7 @@ function handleClearButtonClick(event) {
     resultNumber.innerHTML = "0"
 }
 
+// Since the script is loaded in head, the body content has not been loaded yet. 
+// Wait until the full body is loaded to prevent "null" references
+// Source: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 document.addEventListener("DOMContentLoaded", main)
