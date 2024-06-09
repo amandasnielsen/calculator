@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="row">
+                <div class="summary">
+                    <div class="result" id="result-number">0</div>
+                    <div class="last-input">Last input: <span id="last-input-number">nothing</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="button number">1</div>
+                <div class="button number">2</div>
+                <div class="button number">3</div>
+                <div class="button action" id="action-plus">+</div>
+            </div>
+            <div class="row">
+                <div class="button number">4</div>
+                <div class="button number">5</div>
+                <div class="button number">6</div>
+                <div class="button action" id="action-minus">-</div>
+            </div>
+            <div class="row">
+                <div class="button number">7</div>
+                <div class="button number">8</div>
+                <div class="button number">9</div>
+                <div class="button action" id="action-multiply">*</div>
+            </div>
+            <div class="row">
+                <div class="button number">0</div>
+                <div class="button action" id="action-equals">=</div>
+            </div>
+        </div>
+        <div id="clear">Clear</div>
+    </div>
+</body>
+
+</html>
