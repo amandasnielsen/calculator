@@ -23,6 +23,7 @@ function main() {
         numberButtons[i].addEventListener("click", handleNumberButtonClick)
     }
 
+    // Adds event listener when clear and action buttons are clicked 
     actionButtonPlus.addEventListener("click", handleActionButtonPlusClick)
     actionButtonMinus.addEventListener("click", handleActionButtonMinusClick)
     actionButtonMultiply.addEventListener("click", handleActionButtonMultiplyClick)
